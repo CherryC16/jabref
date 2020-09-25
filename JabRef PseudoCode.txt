@@ -1,0 +1,10 @@
+Color colorPreference = DEFAULT.getColor();
+
+if(ENTRY.READ_STATUS == READ) {
+    colorPreference = READ_STATUS_READ.getPreferences().getColor();
+}
+else if(ENTRY.READ_STATUS == SKIMMED) {
+    colorPreference = READ_STATUS_SKIMMED.getPreferences().getColor();
+}
+
+ENTRY.setColor(colorPreference);
